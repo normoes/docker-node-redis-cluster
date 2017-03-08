@@ -10,5 +10,7 @@ The scripts:
 need to be made executable.
 
 `chmod +x build_containers.sh`
+
 `chmod +x run_containers.sh`
+
 `chmod +x stop_containers.sh`
