@@ -1,8 +1,12 @@
-echo $1
+
+arg=$1
+if [ "$arg" != "" ];then
+  echo $1
+fi
+
 
 
 express_net=$(docker network ls --filter name=^express$ -q)
-echo $express_net
 if [ "$express_net" == "" ];then
   echo "---->"
   echo "    creating docker nework express..."
