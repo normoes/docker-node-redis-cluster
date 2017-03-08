@@ -14,3 +14,13 @@ need to be made executable.
 `chmod +x run_containers.sh`
 
 `chmod +x stop_containers.sh`
+
+
+
+## TODO:
+* filter images
+  + `docker image ls normoes/redis`
+  + even better
+    - docker image ls `--filter "label=com.example.version=0.1"`
+    - labels can be set in the Dockerfile
+      + `LABEL com.example.version=0.1`
