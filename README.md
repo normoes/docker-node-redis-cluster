@@ -24,3 +24,9 @@ need to be made executable.
     - docker image ls `--filter "label=com.example.version=0.1"`
     - labels can be set in the Dockerfile
       + `LABEL com.example.version=0.1`
+* add more convenience scripts
+  + remove images
+* improve scripts
+  + argumet forcing build of images...
+  + arguments forcing stopping/removing containers...
+* replace bash scripts by python scripts?
