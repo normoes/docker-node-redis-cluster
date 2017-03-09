@@ -27,7 +27,7 @@ echo
 
 docker run -d --net express -h redis-replica1 --name redis_replica1 normoes/redis_replica
 
-eecho
+echo
 
 docker run -d --net express --name logstash --volumes-from redis_primary --volumes-from nodeapp normoes/logstash
 
