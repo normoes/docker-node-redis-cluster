@@ -17,17 +17,17 @@ unset express_net
 
 
 
-docker run -d -p 3000:3000 --net express -h nodeapp --name nodeapp normoes/node
+docker run -d -p 3000:3000 --net express -h nodeapp --restart always --name nodeapp normoes/node
 
 echo
 
-docker run -d --net express -h redis-primary --name redis_primary normoes/redis_primary
+docker run -d --net express -h redis-primary --restart always --name redis_primary normoes/redis_primary
 
 echo
 
-docker run -d --net express -h redis-replica1 --name redis_replica1 normoes/redis_replica
+docker run -d --net express -h redis-replica1 --restart always --name redis_replica1 normoes/redis_replica
 
 echo
 
-docker run -d --net express --name logstash --volumes-from redis_primary --volumes-from nodeapp normoes/logstash
+docker run -d --net express --restart always --name logstash --volumes-from redis_primary --volumes-from nodeapp normoes/logstash
 
